@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AuthorizationLab.Handlers;
+using AuthorizationLab.Repositories;
 using AuthorizationLab.Requirements;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -47,6 +48,8 @@ namespace AuthorizationLab
 
             services.AddSingleton<IAuthorizationHandler, HasBadgeHandler>();
             services.AddSingleton<IAuthorizationHandler, HasTemporaryPassHandler>();
+            services.AddSingleton<IAuthorizationHandler, DocumentEditHandler>();
+            services.AddSingleton<IDocumentRepository, DocumentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
