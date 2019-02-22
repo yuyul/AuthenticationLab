@@ -24,6 +24,8 @@ namespace AuthorizationLab.Controllers
             claims.Add(new Claim("EmployeeId", "123", ClaimValueTypes.String, Issuer));
             claims.Add(new Claim(ClaimTypes.DateOfBirth, "1970-06-08", ClaimValueTypes.Date));
             //claims.Add(new Claim(ClaimTypes.DateOfBirth, DateTime.UtcNow.AddYears(-1).ToString(), ClaimValueTypes.Date));
+            //claims.Add(new Claim("BadgeNumber", "123456", ClaimValueTypes.String, Issuer));
+            claims.Add(new Claim("TemporaryBadgeExpiry", DateTime.Now.AddDays(-1).ToString(), ClaimValueTypes.String, Issuer));
 
             var userIdentity = new ClaimsIdentity("SuperSecureLogin");
 

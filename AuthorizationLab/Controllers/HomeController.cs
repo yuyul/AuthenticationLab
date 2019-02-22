@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AuthorizationLab.Controllers
 {
-    [Authorize(Policy ="Over21Only")]
+    [Authorize(Policy ="BuildingEntry")]
     public class HomeController: Controller
     {
         public IActionResult Index()
