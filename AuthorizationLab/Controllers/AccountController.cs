@@ -21,6 +21,7 @@ namespace AuthorizationLab.Controllers
 
             claims.Add(new Claim(ClaimTypes.Name, "barry", ClaimValueTypes.String, Issuer));
             claims.Add(new Claim(ClaimTypes.Role, "Administrator", ClaimValueTypes.String, Issuer));
+            claims.Add(new Claim("EmployeeId", "123", ClaimValueTypes.String, Issuer));
 
             var userIdentity = new ClaimsIdentity("SuperSecureLogin");
 

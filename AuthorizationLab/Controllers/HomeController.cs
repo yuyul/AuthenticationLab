@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AuthorizationLab.Controllers
 {
-    [Authorize(Roles = "Administrator")]
+    [Authorize(Policy ="EmployeeId")]
     public class HomeController: Controller
     {
         public IActionResult Index()
